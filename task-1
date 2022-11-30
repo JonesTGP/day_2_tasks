@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Difference between HTTP1.1 and HTTP2</title>
+  <style>
+    body{
+      font-family:sans-serif ;
+      background-color: #F4F2EA;
+      color: #493932;
+    }
+    .container{
+      max-width: 900px;
+      margin: auto;
+      border: 6px solid #A99C9C;
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .date{
+      letter-spacing: 1.4px;
+      font-weight:600;
+      color: #3e3e3e;
+      text-transform: uppercase;
+    }
+    .heading{
+      border-left: 5px solid #8AC43F;
+      color: #3e3e3e;
+      padding-left: 6px;
+    }
+    .num{
+      color: #8AC43F;
+    }
+    .pow{
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="date">
+      <p>november 29<sup class="pow">th</sup> 2022</p>
+    </div>
+
+      <h1 class="heading">
+        Difference between Window object and Document object in JavaScript
+      </h1>
+      <p>
+        In this article, we will see the Document object & Window object, their various properties & methods, along with knowing their implementation & the differences between them. 
+        <br>
+        A clear understanding of Browser Object Model (BOM) and Document Object Model(DOM) resolves the problem.     
+      </p>
+      <hr>
+
+      <h2 class="heading">
+        Browser Object Model (BOM)
+      </h2>
+      <p>
+        The Browser Object Model contains objects that represent the current browser window or tab. The topmost object in the BOM is the window object representing the window or tab or an iframe sometimes. Window object has properties like browser history, location and the device's screen etc. In case of multi tab browser, a window object represents a single tab, but some of its properties like innerHeight, innerWidth and methods like resizeTo() will affect the whole browser window.
+      </p>
+      <hr>
+
+      <h2 class="heading">
+        Document Object Model (DOM)
+      </h2>
+      <p>
+        When a web page is loaded, the browser creates a Document Object Model of the page. The document object represents the whole html document as a tree of Objects(HTML, HEAD, BODY, and other HTML tags). It is the root element that represents the html document.
+      </p>
+      <hr>
+
+      <h2 class="heading">
+        Window Object
+      </h2>
+      <p><li>
+        The window object is the top most object of the DOM hierarchy. It represents a browser window or frame that displays the contents of the webpage. Whenever a window appears on the screen to display the contents of the document, the window object is created.</li>
+        <br><li>
+        The window object represents a window/tab containing a DOM document</li>
+        <br><li>
+        The window is part of BOM, not DOM.</li>
+        <br><li>
+        Properties of the window object cannot be accessed by the document object.</li>
+      </p>
+      <hr>
+
+      <h2 class="heading">
+        Document Object
+      </h2>
+      <p>
+        <li>
+        Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of the page. Using document object, JavaScript can modify, add and delete the HTML elements, attributes CSS styles in the page</li>
+        <br><li>
+        document object is property of window object that points to the DOM document loaded in that window.</li>
+        <br><li>
+        The document is part of BOM (browser object model) and dom (Document object model)</li>
+        <br><li>
+        You can access a document object either using window.document property or using document object directly as window is global object.</li>
+        <br><li>
+        Properties of document objects such as title, body, cookies, etc can also be accessed by a window.like this
+        <br>
+        window. document.title</li>
+      </p>
+      <hr>
+
+  </div>
+</body>
+</html>
